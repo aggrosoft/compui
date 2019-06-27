@@ -1,0 +1,8 @@
+{
+  "name": "CompUI",
+  "description": "A graphical user interface for composer, written in PHP",
+  "version": "0.1.0",
+  "dependencies": {
+  },
+  "devDependencies": {}
+}

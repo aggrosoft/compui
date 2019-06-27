@@ -1,0 +1,38 @@
+{
+    "name": "aggrosoft/compui",
+    "type": "project",
+    "description": "A graphical web interface for managing composer dependencies, written in PHP",
+    "license": [
+        "MIT"
+    ],
+    "require": {
+        "slim/slim": "^3.12",
+        "slim/twig-view": "^2.5",
+        "slim/http-cache": "^0.4",
+        "twbs/bootstrap": "4.0.0",
+        "ajaxorg/ace": "1.4.5"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "rm -rf assets/bootstrap",
+            "cp -R vendor/twbs/bootstrap/dist assets/bootstrap",
+            "cp -R vendor/twbs/bootstrap/assets/js/vendor assets/bootstrap/js",
+            "rm -rf assets/ace",
+            "cp -R vendor/ajaxorg/ace/src-min assets/ace"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "ajaxorg/ace",
+                "version": "1.4.5",
+                "source": {
+                    "url": "https://github.com/ajaxorg/ace-builds.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ]
+}

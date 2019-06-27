@@ -1,0 +1,35 @@
+{% if infos[depKey] is defined %}
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center" id="heading{{ depKey }}">
+        <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{ depKey }}" aria-expanded="true" aria-controls="heading{{ depKey }}">
+                {{ depTitle }}
+            </button>
+        </h5>
+        <span class="badge badge-info badge-pill">{{ infos[depKey]|length }}</span>
+    </div>
+
+    <div id="collapse{{ depKey }}" class="collapse{% if show %} show{% endif %}" aria-labelledby="heading{{ depKey }}" data-parent="#accordion">
+        <ul class="list-group list-group-flush">
+            {% for req, ver in infos[depKey] %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+
+                    {% if ver is iterable %}
+                    <ul class="list-group list-group-flush">
+                        {% for ent in ver %}
+                        <li class="list-group-item">
+                            {{ ent }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <span class="badge badge-primary badge-pill">{{ req }}</span>
+                    {% else %}
+                    {{ req }}
+                    <span class="badge badge-primary badge-pill">{{ ver }}</span>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endif %}

@@ -1,0 +1,5 @@
+vendor/
+test/
+assets/ace/
+assets/bootstrap/
+.idea/

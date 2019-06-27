@@ -1,0 +1,9 @@
+{
+  "composer-binary": "composer",
+  "project-path": "./test/",
+  "allowed-commands": [
+    "update",
+    "install",
+    "dumpautoload"
+  ]
+}
