@@ -1,6 +1,6 @@
 {
   "composer-binary": "composer",
-  "project-path": "./test/",
+  "project-path": "./",
   "allowed-commands": [
     "update",
     "install",
