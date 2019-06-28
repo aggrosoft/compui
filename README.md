@@ -1,6 +1,8 @@
 # compUI
 
-A graphical user interface for composer, written in PHP
+A graphical user interface for composer, written in PHP. Allows you to view all installed dependencies and edit the composer file directly. You can also run composer commands like install/update etc.
+
+![Screenshot](/docs/screen.jpg?raw=true "Optional Title")
 
 ## Getting Started
 
@@ -10,7 +12,20 @@ These instructions will get you a copy of the project up and running on your loc
 
 Installing is simple, you need composer to install compui.
 
+#### Install using composer
+
+```
+composer create-project aggrosoft/compui
+```
+
+#### Install using checkout
+
 Checkout the git repository or download the zip archive through github. 
+
+```
+git checkout https://github.com/aggrosoft/compui.git
+```
+
 Go to the installation folder and run the following command.
 
 ```
@@ -18,6 +33,8 @@ composer install
 ```
 
 You have a running installation now, the default points to the composer file of compUI itself.
+
+### Configuration
 Edit config.json and set the project-path variable to a folder of the installation you want to manage:
 
 ```
